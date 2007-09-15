@@ -6,6 +6,12 @@ class Courses(models.Model):
     def __unicode__(self):
         return self.name
 
+    class Admin:
+        pass
+
+    class Meta:
+        verbose_name_plural = 'Courses'
+
 class Note(models.Model):
     title = models.CharField(max_length=40)
     course = models.ManyToManyField(Courses)
@@ -16,3 +22,6 @@ class Note(models.Model):
 
     def __unicode__(self):
         return self.title
+
+    class Admin:
+        pass
