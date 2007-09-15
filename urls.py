@@ -6,7 +6,12 @@ info_dict = {
         'paginate_by':10,
 }
 
+detail_dict = {
+        'queryset': Note.objects.all(),
+}
 urlpatterns = patterns('',
         (r'^admin/', include('django.contrib.admin.urls')),
-        (r'^$', 'django.views.generic.list_detail.object_list', info_dict) 
+        (r'^$', 'django.views.generic.list_detail.object_list', info_dict),
+        (r'^note/(?P<object_id>\d+)/$', 'django.views.generic.list_detail.object_detail', detail_dict),
+        (r'^public/(?P<path>.*)$', 'django.views.static.serve', {'document_root': 'f:/media/code/python/cornell/public'})
 )
