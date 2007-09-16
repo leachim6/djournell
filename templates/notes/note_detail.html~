@@ -14,7 +14,7 @@
        <div id="notedate">
            {{ object.pub_date }}
        </div>
-       <br class="clear" />
+       <br class="clear" /><br /><br />
 
        <div id="keycol">
            {{ object.keycol }}

@@ -8,8 +8,9 @@
     <body>
         <table cellspacing="" border="1" width="100%">
             <tr>
-                <th>Name</th>
-                <th>Course</th>
+                <th colspan="75">Name</th>
+                <th colspan="75">Course</th>
+                <th colspan="75">Published</th>
             </tr>
             {% for item in object_list %}
                <tr>
@@ -19,12 +20,10 @@
                        {{ course }}
                      {% endfor %}
                  </td>
+                 <td>{{ item.pub_date }}</td>
              </tr>
              {% endfor %}
              
          </table>
-         {% if request.user.is_superuser %}
-               <h3>Users are lusers</h3>
-               {% endif %}
     </body>
 </html>

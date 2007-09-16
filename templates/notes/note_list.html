@@ -8,17 +8,19 @@
     <body>
         <table cellspacing="" border="1" width="100%">
             <tr>
-                <th>Name</th>
-                <th>Course</th>
+                <th colspan="75">Name</th>
+                <th colspan="75">Course</th>
+                <th colspan="75">Published</th>
             </tr>
             {% for item in object_list %}
                <tr>
-                   <td><a href="/note/{{ item.id }}">{{ item.title }}</a></td>
-                   <td>
+                   <td colspan="75"><a href="/note/{{ item.id }}">{{ item.title }}</a></td>
+                   <td colspan="75">
                      {% for course in item.course.all %}
                        {{ course }}
                      {% endfor %}
                  </td>
+                 <td colspan="75">{{ item.pub_date }}</td>
              </tr>
              {% endfor %}
              
