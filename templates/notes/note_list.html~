@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Note::List</title>
+        <link rel="stylesheet" type="text/css" href="/public/list.css" />
+        <link rel="stylesheet" type="text/css" href="/public/table.css" />
+    </head>
+    <body>
+        <table cellspacing="" border="1" width="100%">
+            <tr>
+                <th>Name</th>
+                <th>Course</th>
+            </tr>
+            {% for item in object_list %}
+               <tr>
+                   <td><a href="/note/{{ item.id }}">{{ item.title }}</a></td>
+                   <td>
+                     {% for course in item.course.all %}
+                       {{ course }}
+                     {% endfor %}
+                 </td>
+             </tr>
+             {% endfor %}
+             
+         </table>
+         {% if request.user.is_superuser %}
+               <h3>Users are lusers</h3>
+               {% endif %}
+    </body>
+</html>

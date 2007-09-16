@@ -1,0 +1,153 @@
+div#itsthetable {
+}
+
+html>body div#itsthetable {
+	font: normal normal normal 11px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	height: 377px
+}
+
+div#itsthetable table {
+	border-collapse: collapse
+}
+
+caption {
+	background: url(/public/datatable.gif) #FFF repeat-x scroll center left;
+	border-bottom: 1px solid #CCC;
+	border-top: 1px solid #CCC;
+	display: none;
+	font: normal normal bold 13px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 5px
+}
+
+html>body caption {
+	display: block
+}
+
+thead tr th, tr thead td {
+	background: url(/public/datatable.gif) #FFF repeat-x scroll center left;
+	border-bottom: 1px solid #CCC;
+	font: normal normal normal 11px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 5px;
+	position: relative;
+	text-align: left
+}
+
+html>body thead tr th, html>body tr thead td {
+	position: inherit
+}
+
+tbody tr th, tbody tr td {
+	background: url(/public/datatablerow.gif) #FFF repeat-x scroll center left;
+	display: table-cell;
+	font: normal normal normal 11px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 5px;
+	text-align: left;
+	vertical-align: top
+}
+
+tbody tr.odd th, tbody tr.odd td {
+	background: url(/public/datatablerow.gif) #EEE repeat-x scroll center left;
+	display: table-cell;
+	padding: 5px;
+	text-align: left;
+	vertical-align: top
+}
+
+tbody tr:hover th, tbody tr:hover td, tbody tr.odd:hover th, tbody tr.odd:hover td {
+	background: url(datatablerow.gif) #999 repeat-x scroll center left;
+	color: #FFF;
+	display: table-cell;
+	padding: 5px;
+	text-align: left;
+	vertical-align: top
+}
+
+tbody tr a, tbody tr a:link, tbody tr a:visited {
+	color: #009;
+	text-decoration: none
+}
+
+tbody a:hover {
+	color: #009;
+	text-decoration: underline
+}
+
+tbody tr:hover th a, tbody tr:hover td a, tbody tr.odd:hover th a, tbody tr.odd:hover td a {
+	color: #FFF;
+	text-decoration: none
+}
+
+tbody tr:hover th a:hover, tbody tr:hover td a:hover, tbody tr.odd:hover th a:hover, tbody tr.odd:hover td a:hover {
+	color: #FFF;
+	text-decoration: underline
+}
+
+tfoot tr th {
+	background: url(/public/datatable.gif) #FFF repeat scroll center left;
+	border-top: 1px solid #CCC;
+	font: normal normal bold 11px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 5px;
+	text-align: right;
+	z-index: 1000000
+}
+
+tfoot tr td {
+	background: url(/public/datatable.gif) #FFF repeat scroll center left;
+	border-top: 1px solid #CCC;
+	font: italic normal normal 11px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 5px;
+	z-index: 1000000
+}
+
+html>body tfoot tr th, html>body tfoot tr td {
+	border-bottom: 1px solid #CCC
+}
+
+ 
+html>body thead {
+	display: block
+}
+
+html>body tfoot {
+	display: block;
+	position: absolute;
+	top: 620px
+}
+
+html>body tbody {
+	display: block;
+	height: 300px;
+	overflow: auto
+}
+
+html>body thead tr th, html>body tbody tr th {
+	width: 98px
+}
+
+html>body thead tr th + th, html>body tbody tr th + td {
+	width: 100px
+}
+
+html>body thead tr th + th + th, html>body tbody tr th + td + td {
+	width: 80px
+}
+
+html>body thead tr th + th + th + th, html>body tbody tr th + td + td + td {
+	width: 230px
+}
+
+html>body thead tr th + th + th + th + th {
+	width: 86px
+}
+
+html>body tbody tr th + td + td + td + td {
+	width: 70px
+}
+
+html>body tfoot tr th {
+	width: 98px
+}
+
+html>body tfoot tr th + td {
+	width: 526px
+}

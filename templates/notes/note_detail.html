@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+        <title>Note::{{ object.title }}</title>
+        <link rel="stylesheet" type="text/css" href="/public/detail.css" />
+    </head>
+    <body>
+        <div id="wrapper">    
+        <div id="coursename">
+            {% for course in object.course.all %}
+            {{ course }}
+            {% endfor %}
+       </div>
+       <div id="notedate">
+           {{ object.pub_date }}
+       </div>
+       <br class="clear" /><br /><br />
+
+       <div id="keycol">
+           {{ object.keycol }}
+       </div>
+       <div id="bodycol">
+           {{ object.bodycol }}
+       </div>
+   </div>
+    </body>
+</html>

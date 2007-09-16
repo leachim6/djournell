@@ -1,0 +1,42 @@
+#wrapper{
+    width:70%;
+    margin:0 auto;
+}
+#coursename{
+    font-family:"Courier New",serif;
+    font-size:16pt;
+    font-weight:bold;
+    display:block;
+    float:left;
+}
+
+#notedate{
+    font-family:"Courier New",serif;
+    font-size:16pt;
+    font-weight:bold;
+    display:block;
+    float:right;
+}
+
+br.clear{
+ clear:both;
+}
+
+#keycol{
+    font-family:"Courier New",serif;
+    font-size:15pt;
+    font-weight:bold;
+    float:left;
+    width:30%; 
+}
+
+#bodycol{
+    font-family:"Courier New",serif;
+    font-size:12pt;
+    float:right;
+    width:65%;
+    border-left:2px solid #999999;
+    padding-left:15px;
+    text-align:justify;
+}
+

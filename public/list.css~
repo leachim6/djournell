@@ -1,0 +1,4 @@
+*{
+    font-family:"Courier New", serif;
+    font-size:17pt !important;
+}
