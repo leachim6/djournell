@@ -18,5 +18,6 @@ def edit(request, note_id):
     f = forms.form_for_instance(note)()
     form_dict = {
             'form': f,
+            'note_id': note_id,
             }
     return render_to_response('notes/edit_note.html', form_dict, context_instance=RequestContext(request))

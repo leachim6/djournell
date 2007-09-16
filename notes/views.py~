@@ -2,6 +2,7 @@ from django.views.generic.list_detail import object_list
 from cornell.notes.models import *
 from django import newforms as forms
 from django.shortcuts import *
+from django.template import RequestContext
 
 def notes_for_course(request, course_slug):
     course = Courses.objects.get(slug=course_slug)
@@ -18,4 +19,4 @@ def edit(request, note_id):
     form_dict = {
             'form': f,
             }
-    return render_to_response('notes/edit_note.html', form_dict)
+    return render_to_response('notes/edit_note.html', form_dict, context_instance=RequestContext(request))
