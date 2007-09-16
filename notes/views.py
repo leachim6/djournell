@@ -5,3 +5,7 @@ def notes_for_course(request, course_slug):
     course = Courses.objects.get(slug=course_slug)
     notes  = course.note_set.all()
     return object_list(request, queryset=notes,template_name='Notes/notes_for_course.html',paginate_by=15)
+
+def course_list(request):
+    course_list = Courses.objects.all()
+    return object_list(request, queryset=course_list,template_name='Notes/course_list.html',paginate_by=15)
