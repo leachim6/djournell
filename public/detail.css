@@ -40,5 +40,17 @@ br.clear{
     text-align:justify;
     margin-right:15px;
     padding-top:20px;
+    padding-bottom:5px;
 }
 
+#sumcol{
+    font-family:"Courier New",serif;
+    font-size:13.5pt;
+    height:30%;
+    border-top:2px solid #999999;
+    text-align:justify;
+    font-weight:bold;
+    clear:both;
+    padding-left:25px;
+    padding-top:5px;
+}

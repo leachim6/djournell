@@ -18,6 +18,7 @@ class Note(models.Model):
     course = models.ManyToManyField(Courses)
     keycol = models.TextField()
     bodycol = models.TextField()
+    sumcol = models.TextField()
     pub_date = models.DateTimeField()
     comments_enabled = models.BooleanField()
 
