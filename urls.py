@@ -16,6 +16,7 @@ urlpatterns = patterns('',
         (r'^public/(?P<path>.*)$', 'django.views.static.serve', {'document_root': 'f:/media/code/python/cornell/public'}),
         (r'^course/(?P<course_slug>[-\w]+)/$', 'cornell.notes.views.notes_for_course'),
         (r'^courses?/$', 'cornell.notes.views.course_list'),
+        (r'^edit/(?P<note_id>\d+)/$', 'cornell.notes.views.edit'),
 
 
 )
