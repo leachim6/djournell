@@ -21,6 +21,8 @@ class Note(models.Model):
     sumcol = models.TextField()
     pub_date = models.DateTimeField()
     comments_enabled = models.BooleanField()
+    upload = models.FileField(upload_to="uploads")
+    attachment = models.FilePathField(path="f:/media/code/python/cornell/public/uploads" , match="\.(pdf|txt|rtf|jpg|doc|png|gif)$", recursive=True)
 
     def __unicode__(self):
         return self.title

@@ -18,8 +18,11 @@ class Note(models.Model):
     course = models.ManyToManyField(Courses)
     keycol = models.TextField()
     bodycol = models.TextField()
+    sumcol = models.TextField()
     pub_date = models.DateTimeField()
     comments_enabled = models.BooleanField()
+    upload = FileField(upload_to="uploads")
+    attachment = FilePathField(path="f:/media/code/python/cornell/public/uploads" , match="\.(pdf|txt|rtf|jpg|doc|png|gif)$", recursive=True)
 
     def __unicode__(self):
         return self.title
