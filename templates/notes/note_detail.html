@@ -1,8 +1,10 @@
+{% load note_extras %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
     <head>
         <title>Note::{{ object.title }}</title>
         <link rel="stylesheet" type="text/css" href="/public/detail.css" />
+          {% import_greybox %} 
     </head>
     <body>
         <div id="wrapper">    
@@ -29,6 +31,7 @@
            {{ object.sumcol }}
        </div>
        <div id="edit">
+	       <br />
            <small><a href="/edit/{{ object.id}}">Edit</a></small>
    </div>
     </body>
