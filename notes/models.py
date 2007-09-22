@@ -16,16 +16,20 @@ class Courses(models.Model):
 class Note(models.Model):
     title = models.CharField(max_length=40)
     course = models.ManyToManyField(Courses)
-    keycol = models.TextField()
-    bodycol = models.TextField()
-    sumcol = models.TextField()
-    pub_date = models.DateTimeField()
+    keycol = models.TextField(blank=True)
+    bodycol = models.TextField(blank=True)
+    sumcol = models.TextField(blank=True)
+    pub_date = models.DateTimeField(blank=False)
     comments_enabled = models.BooleanField()
-    upload = models.FileField(upload_to="uploads")
-    attachment = models.FilePathField(path="f:/media/code/python/cornell/public/uploads" , match="\.(pdf|txt|rtf|jpg|doc|png|gif)$", recursive=True)
+    upload = models.FileField(upload_to='public/%Y/%m/%d', blank=True)
 
     def __unicode__(self):
         return self.title
 
     class Admin:
-        pass
+        fields = (
+                ('Details', {'fields': ('title','course','pub_date',)}),
+                ('Information', {'fields': ('keycol','bodycol','sumcol',)}),
+                ('Experimental', {'fields': ('comments_enabled','upload',), 'classes': 'collapse'}),
+                )
+

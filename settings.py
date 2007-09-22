@@ -35,12 +35,12 @@ USE_I18N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = 'f:/media/code/python/cornell/public/'
+MEDIA_ROOT = 'f:/www/media/notes/uploads/'
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = 'http://mikedonaghy.org/media/notes/uploads'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -62,6 +62,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.middleware.doc.XViewMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'cornell.urls'
@@ -81,7 +82,8 @@ INSTALLED_APPS = (
     'cornell.notes',
     'django.contrib.admin',
     'django.contrib.comments',
-    'django.contrib.markup'
+    'django.contrib.markup',
+    'django.contrib.flatpages'
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
@@ -91,3 +93,5 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.core.context_processors.request",
 )
+
+SITE_ID = 4
