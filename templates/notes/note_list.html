@@ -1,11 +1,14 @@
+{% load note_extras %}
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
     <head>
         <title>Note::List</title>
         <link rel="stylesheet" type="text/css" href="/public/list.css" />
         <link rel="stylesheet" type="text/css" href="/public/table.css" />
+        {% import_topbar_css %}
     </head>
     <body>
+        {% topbar %}
         <table cellspacing="" border="1" width="100%">
             <tr>
                 <th colspan="75">Name</th>
