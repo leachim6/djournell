@@ -1,0 +1,26 @@
+{% include note_extras %}
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+    <head>
+	    <title>Test</title>
+        <link rel="stylesheet" type="text/css" href="/public/edit_form.css" />
+    </head>
+    <body>
+        {% if user.is_authenticated %}
+        <strong>Currently Logged In as : {{ request.user.username }} | <a href="/accounts/logout">Logout</a></strong>
+        {% endif %}
+        <br /><br />
+        {% if request.user.is_authenticated %}
+        <form method="post" action="">
+            <table cellspacing="0">
+               {{ form.as_table }}
+           </table>
+           <input type="submit" />
+       </form>
+       {% else %}
+       <p>You Need to log in to edit notes, please do so by going 
+           <a href="/accounts/login/?next=/edit/{{ note_id }}">Here</a>
+       </p>
+       {% endif %}
+    </body>
+</html>

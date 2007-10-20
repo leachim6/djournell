@@ -1,0 +1,40 @@
+#topbar_handle{
+    width:100%;
+    height:25px;
+}
+
+#topbar{
+    font-family:cambria,sans-seif;
+    height:45px;
+    width:100%;
+    min-width:100%;
+    background:#222222;
+    margin-bottom:15;
+}
+
+#topbar li{
+    list-style-type:none;
+    float:left;
+    padding:15px;
+    
+}
+
+#topbar li a:link{
+    text-decoration:none;
+    color:#c8c8c8;
+}
+
+#topbar li a:active{
+    text-decoration:none;
+    color:#c8c8c8;
+}
+
+#topbar li a:visited{
+    text-decoration:none;
+    color:#c8c8c8;
+}
+
+#topbar li a:hover {
+      background:#646464;
+      text-decoration:underline;
+}
