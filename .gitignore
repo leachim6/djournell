@@ -1,0 +1,8 @@
+*.swp*
+~*
+*tmp*
+*.log
+*.db
+*.sqlite
+*.sqlite3
+*.pyc

@@ -5,7 +5,7 @@ register = template.Library()
 def import_greybox():
     return """
     <script type="text/javascript">
-        var GB_ROOT_DIR = "http://localhost:8000/public/gb";
+        var GB_ROOT_DIR = "http://localhost:8000/public/gb/greybox";
     </script>
     <script type="text/javascript" src="/public/gb/greybox/AJS.js"></script>
     <script type="text/javascript" src="/public/gb/greybox/AJS_fx.js"></script>

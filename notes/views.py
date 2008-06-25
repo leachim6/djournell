@@ -1,5 +1,5 @@
 from django.views.generic.list_detail import object_list
-from cornell.notes.models import *
+from djournell.notes.models import *
 from django import newforms as forms
 from django.newforms import form_for_instance
 from django.shortcuts import *

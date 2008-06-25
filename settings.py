@@ -1,4 +1,4 @@
-# Django settings for cornell project.
+# Django settings for djournell project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -10,7 +10,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASE_ENGINE = 'sqlite3'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = 'dj_cornell'             # Or path to database file if using sqlite3.
+DATABASE_NAME = 'djournel.db'             # Or path to database file if using sqlite3.
 #DATABASE_USER = 'root'             # Not used with sqlite3.
 #DATABASE_PASSWORD = ''         # Not used with sqlite3.
 #DATABASE_HOST = 'localhost'             # Set to empty string for localhost. Not used with sqlite3.
@@ -48,7 +48,7 @@ MEDIA_URL = 'http://home.mikedonaghy.org/media/'
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '2r4i(vd@3lvl8rphrc349y@27car^v&nm3_w7ma7a6rma-9x%k'
+SECRET_KEY = '2r4i(vd@3lvl8ds$hrc349y@27car^v&nm3_w7ma7a6rma-9x%k'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -65,13 +65,13 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
-ROOT_URLCONF = 'cornell.urls'
+ROOT_URLCONF = 'djournell.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-   '/home/leachim6/src/python/cornell/templates'
+   '/home/leachim6/src/python/djournell/templates'
 )
 
 INSTALLED_APPS = (
@@ -79,7 +79,7 @@ INSTALLED_APPS = (
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.sites',
-    'cornell.notes',
+    'djournell.notes',
     'django.contrib.admin',
     'django.contrib.comments',
     'django.contrib.markup',
