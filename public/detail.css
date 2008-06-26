@@ -27,7 +27,9 @@ br.clear{
     font-size:15pt;
     font-weight:bold;
     float:left;
-    width:30%; 
+    width:30%;
+    border-right:2px solid #999999;
+    padding-right:20px;
 }
 
 #bodycol{
@@ -35,7 +37,6 @@ br.clear{
     font-size:12pt;
     float:right;
     width:65%;
-    border-left:2px solid #999999;
     padding-left:15px;
     text-align:justify;
     margin-right:15px;

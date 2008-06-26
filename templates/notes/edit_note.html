@@ -11,11 +11,11 @@
         {% endif %}
         <br /><br />
         {% if request.user.is_authenticated %}
-        <form method="post" action="">
+        <form method="post" action="{% url ... %}/edit/{{ note_id }}/">
             <table cellspacing="0">
                {{ form.as_table }}
            </table>
-           <input type="submit" />
+           <input type="submit" onlick="window.location.reload();"/>
        </form>
        {% else %}
        <p>You Need to log in to edit notes, please do so by going 
