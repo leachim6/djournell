@@ -4,7 +4,7 @@
     <head>
         <title>Note::{{ object.title }}</title>
         <link rel="stylesheet" type="text/css" href="/public/detail.css" />
-          {% import_greybox %} 
+          {% import_thickbox %} 
     </head>
     <body>
         <div id="wrapper">    
@@ -32,7 +32,7 @@
        </div>
        <div id="edit">
 	       <br />
-           <small><a href="/edit/{{ object.id}}" rel="gb_page_center[500,500]">Edit</a></small>
+           <small><a href="/edit/{{ object.id}}/?" class="thickbox">Edit</a></small>
    </div>
     </body>
 </html>
