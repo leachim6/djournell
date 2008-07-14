@@ -1,4 +1,5 @@
 # Django settings for djournell project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -48,13 +49,14 @@ MEDIA_URL = 'http://your.com/media'
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '2r4i(vd@3lvl8ds$hrc349y@27car^v&nm3_w7ma7a6rma-9x%k'
+# Go to http://grc.com/passwords and select all the text in the box that says
+# "63 random alpha-numeric characters (a-z, A-Z, 0-9):" , then put it between the quotes
+# after SECRET_KEY = below
+SECRET_KEY = ''
 
-# List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
     'django.template.loaders.filesystem.load_template_source',
     'django.template.loaders.app_directories.load_template_source',
-#     'django.template.loaders.eggs.load_template_source',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -67,12 +69,7 @@ MIDDLEWARE_CLASSES = (
 
 ROOT_URLCONF = 'djournell.urls'
 
-TEMPLATE_DIRS = (
-    # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
-    # Always use forward slashes, even on Windows.
-    # Don't forget to use absolute paths, not relative paths.
-   '/absolute/path/to/djournell/templates'
-)
+TEMPLATE_DIRS = [os.path.join(os.path.dirname(__file__), "templates")]
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -93,5 +90,3 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.media",
     "django.core.context_processors.request",
 )
-
-SITE_ID = 4
