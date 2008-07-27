@@ -1,5 +1,7 @@
 from django.conf.urls.defaults import *
 from djournell.notes.models import Note,Courses
+from django.contrib import admin
+admin.autodiscover()
 
 info_dict = {
         'queryset': Note.objects.all().order_by('-pub_date'),
@@ -11,7 +13,8 @@ detail_dict = {
 }
 
 urlpatterns = patterns('',
-        (r'^admin/', include('django.contrib.admin.urls')),
+        (r'^admin/(.*)', admin.site.root),
+        (r'^admin/doc/', include('django.contrib.admindocs.urls')),
         (r'^$', 'django.views.generic.list_detail.object_list', info_dict),
         (r'^note/(?P<object_id>\d+)/$', 'django.views.generic.list_detail.object_detail', detail_dict),
         (r'^public/(?P<path>.*)$', 'django.views.static.serve', {'document_root': '/home/leachim6/src/python/djournell/public'}),
