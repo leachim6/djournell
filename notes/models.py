@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib import admin
+
 
 class Courses(models.Model):
     name = models.CharField(max_length=40)
@@ -6,9 +8,6 @@ class Courses(models.Model):
     
     def __unicode__(self):
         return self.name
-
-    class Admin:
-        pass
 
     class Meta:
         verbose_name_plural = 'Courses'
@@ -33,3 +32,5 @@ class Note(models.Model):
                 ('Experimental', {'fields': ('comments_enabled','upload',), 'classes': 'collapse'}),
                 )
 
+admin.site.register(Courses)
+admin.site.register(Note)
