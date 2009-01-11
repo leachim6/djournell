@@ -11,7 +11,7 @@
         {% endif %}
         <br /><br />
         {% if request.user.is_authenticated %}
-        <form method="post" action="{% url ... %}/edit/{{ note_id }}/">
+        <form method="post" action="/edit/{{ note_id }}/">
             <table cellspacing="0">
                {{ form.as_table }}
            </table>
@@ -19,7 +19,7 @@
        </form>
        {% else %}
        <p>You Need to log in to edit notes, please do so by going 
-           <a href="/accounts/login/?next=/edit/{{ note_id }}">Here</a>
+         <a href="{{ request.path }}?next=/edit/{{ note_id }}">Here</a>
        </p>
        {% endif %}
     </body>

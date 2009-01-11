@@ -5,6 +5,7 @@ from django.contrib import admin
 class Courses(models.Model):
     name = models.CharField(max_length=40)
     slug = models.SlugField()
+    id = models.AutoField(primary_key=True)
     
     def __unicode__(self):
         return self.name
@@ -21,6 +22,8 @@ class Note(models.Model):
     pub_date = models.DateTimeField(blank=False)
     comments_enabled = models.BooleanField()
     upload = models.FileField(upload_to='public/%Y/%m/%d', blank=True)
+    id = models.AutoField(primary_key=True)
+
 
     def __unicode__(self):
         return self.title

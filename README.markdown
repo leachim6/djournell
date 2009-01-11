@@ -46,4 +46,4 @@ after that , all you have to do is run
 
 	    python ./manage.py runserver
 
-then go to http://localhost:8000 in your web browser and you're off to the racesr
+then go to http://localhost:8000 in your web browser and you're off to the races
